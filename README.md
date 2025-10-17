@@ -44,6 +44,29 @@ global middle
 # /config
 db.js   
 
+# Pages
+Home Page
+
+Introduction to BaseEducation
+Highlight major destinations (USA, Canada, UK, Australia)
+Call-to-action: Book a Free Consultation
+Country Page
+
+Fetch and display all countries from database
+Add / Edit / Delete country info via forms
+Render countries using CountryCard component
+
+Service Page
+
+List of educational and test preparation services:
+IELTS, TOEFL, SAT, GRE, GMAT, PTE
+Overview of study abroad process
+
+Profile Page
+
+User’s personal dashboard
+View and manage appointments and messages
+
 # Building a Server, Step-By-Step!
 
 1.  `touch server.js` - create a server.js file
@@ -62,7 +85,6 @@ MongoURI=
 # Frontend
 npm create vite@latest .
 create components and pages
-Install Boostrap
 npm i react react-dom
 npm i axios
 
