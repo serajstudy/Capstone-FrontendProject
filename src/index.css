@@ -1,13 +1,3 @@
-
-  
-
-
-
-
-.color{
-  background-color: rgb(10, 171, 26);
-}
-
 html,
 body {
   height: 100%;
@@ -24,6 +14,10 @@ body {
   box-sizing: inherit;
 }
 
-.BaseEducation{
-background-color: aquamarine;
+:root {
+  --red: #D00000;
+  --yello: #FFBA08;
+  --babyBlue: #3F88C5;
+  --blue: #032B43;
+  --pineGreen: #1ccb1ccf;
 }
