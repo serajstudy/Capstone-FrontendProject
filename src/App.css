@@ -1,14 +1,142 @@
-ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;}
-
-.nav-menu li {
-  cursor: pointer;
-  font-weight: 500;
-  display: flex;
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.nav-menu li:hover {
+/* BODY */
+body {
+  background-color: #cff4fc(29, 64, 145);
+  color:#cff4fc(32, 46, 204);
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: lightblue;
+  padding: 15px 30px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: darkblue;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
   color: blue;
+}
+
+/* FOOTER */
+.footer {
+  background-color: darkgray;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* PAGE BOXES */
+.page-box {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 30px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  background-color: beige;
+}
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  text-decoration: none;
+  background-color: darkblue;
+  color: white;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: blue;
+}
+
+/* COUNTRY CARDS */
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.country-card {
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  width: 200px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 2px 2px 5px gray;
+  transition: transform 0.3s;
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
+}
+
+.country-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-content h3 {
+  color: darkblue;
+}
+
+.card-content p {
+  color: darkslategray;
+}
+
+/* SERVICES */
+.service-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.service-box li {
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+  color: darkgreen;
 }
