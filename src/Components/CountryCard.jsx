@@ -1,9 +1,13 @@
 import React from "react";
 
-export default function CountryCard() {
+function CountryCard({ name, image, description }) {
   return (
-    <footer className="bg-dark text-white text-center py-3 mt-5">
-      <p>how are you</p>
-    </footer>
+    <div className="country-card">
+      <img src={image} alt={name} />
+      <h5>{name}</h5>
+      <p>{description}</p>
+    </div>
   );
 }
+
+export default CountryCard;

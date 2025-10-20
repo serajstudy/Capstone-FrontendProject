@@ -1,50 +1,56 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CountryCard from "../components/CountryCard.jsx";
+import Form from "../Components/Form.jsx";
+import { getCountries } from "../api/countries";
 
-//   Paths
+// Optional: flag images
 import usaFlag from "../assets/images/us.svg";
 import ukFlag from "../assets/images/gb.svg";
 import ausFlag from "../assets/images/au.svg";
 import canadaFlag from "../assets/images/ca.svg";
 import nzFlag from "../assets/images/nz.svg";
 
-const countries = [
-  {
-    name: "United States",
-    image: usaFlag,
-    description: "Top universities and diverse education."
-  },
-  {
-    name: "United Kingdom",
-    image: ukFlag,
-    description: "World-class education and cultural heritage."
-  },
-  {
-    name: "Australia",
-    image: ausFlag,
-    description: "Affordable living and high-quality education."
-  },
-  {
-    name: "Canada",
-    image: canadaFlag,
-    description: "Safe environment and post-study opportunities."
-  },
-  {
-    name: "New Zealand",
-    image: nzFlag,
-    description: "Beautiful campuses and supportive study options."
-  }
-];
+const flagMap = {
+  "United States": usaFlag,
+  "United Kingdom": ukFlag,
+  "Australia": ausFlag,
+  "Canada": canadaFlag,
+  "New Zealand": nzFlag,
+};
 
 function Country() {
+  const [countries, setCountries] = useState([]);
+  const userId = "65a1b2c3d4e5f67890123456"; 
+  useEffect(() => {
+    async function fetchCountries() {
+      try {
+        const data = await getCountries();
+        setCountries(data);
+      } catch (error) {
+        console.error("Error fetching countries:", error);
+      }
+    }
+    fetchCountries();
+  }, []);
+
   return (
     <div className="countries-page">
-      <h2 className="text-center mb-4">Study Abroad Destinations</h2>
+      <h2>Study Abroad Destinations</h2>
       <div className="countries-grid">
         {countries.map((country, index) => (
-          <CountryCard key={index} {...country} />
+          <CountryCard
+            key={index}
+            name={country.name}
+            description={country.description}
+            image={flagMap[country.name]}
+          />
         ))}
       </div>
+
+      {/* Message form box */}
+      {countries.length > 0 && (
+        <Form userId={userId} countryId={countries[0]._id} />
+      )}
     </div>
   );
 }
