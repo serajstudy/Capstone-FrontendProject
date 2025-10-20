@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav className="nav">
       <div className="container nav-inner">
-        <div className="brand"><Link to="/">BaseEducation</Link></div>
+        <div className="brand"><Link to="/"><button>BaseEducation</button></Link></div>
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/countries">Countries</Link></li>

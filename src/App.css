@@ -1,28 +1,66 @@
-/* GLOBAL RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+/* Profile Page Styles */
+.text-center {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: darkslategray; /* main text color */
+  padding: 20px;
+  background-color: aliceblue; /* page background */
 }
 
-/* BODY */
-body {
-  background-color: #cff4fc(29, 64, 145);
-  color:#cff4fc(32, 46, 204);
-  line-height: 1.6;
+body{
+  background-color: springgreen;
+  color: indigo;
 }
+
+.list-group-item {
+  background-color: cornflowerbl;
+
+}
+
+h2 {
+  color: darkblue; /* heading color */
+  margin-bottom: 15px;
+}
+
+p {
+  color: black; /* paragraph text */
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.about-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.about-images img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid lightgray;
+}
+
+p:last-of-type {
+  font-weight: bold;
+  color: darkgreen;
+}
+
 
 /* NAVBAR */
 .navbar {
-  background-color: lightblue;
+
   padding: 15px 30px;
+  background-color: turquoise;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .nav-links {
@@ -35,108 +73,58 @@ body {
   text-decoration: none;
   color: darkblue;
   font-weight: bold;
+  
 }
 
 .nav-links a:hover {
   color: blue;
 }
 
-/* FOOTER */
-.footer {
-  background-color: darkgray;
-  color: white;
+/* Countries Page */
+.countries-page {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: ivory;
   padding: 20px;
-  text-align: center;
-}
-
-.footer-links {
-  margin-top: 10px;
-}
-
-.footer-links a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: white;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-/* PAGE BOXES */
-.page-box {
-  max-width: 1000px;
-  margin: 30px auto;
-  padding: 30px;
-  border: 2px solid lightgray;
-  border-radius: 10px;
-  background-color: beige;
-}
-
-/* BUTTON */
-.button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 25px;
-  text-decoration: none;
-  background-color: darkblue;
-  color: white;
-  border-radius: 5px;
-}
-
-.button:hover {
-  background-color: blue;
-}
-
-/* COUNTRY CARDS */
-.cards-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.country-card {
-  border: 2px solid lightgray;
-  border-radius: 10px;
-  width: 200px;
-  overflow: hidden;
-  background-color: white;
-  box-shadow: 2px 2px 5px gray;
-  transition: transform 0.3s;
-}
-
-.country-card:hover {
-  transform: translateY(-5px);
-}
-
-.country-card img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 10px;
-  text-align: center;
-}
-
-.card-content h3 {
-  color: darkblue;
-}
-
-.card-content p {
   color: darkslategray;
 }
 
-/* SERVICES */
-.service-box ul {
-  list-style: none;
-  padding-left: 0;
+.countries-page h2 {
+  color: darkblue;
+  margin-bottom: 20px;
 }
 
-.service-box li {
-  padding: 10px;
-  border-bottom: 1px solid lightgray;
+/* Flex grid for cards: 4 per row */
+.countries-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* spacing between cards */
+}
+
+/* Each card fixed width to fit 4 in a row */
+.country-card {
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: 220px; /* adjust to fit 4 per row */
+  box-shadow: 2px 2px 5px gray;
+  text-align: center;
+}
+
+.country-card img {
+  width: 100px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.country-card h5 {
   color: darkgreen;
+  margin: 10px 0 5px 0;
+}
+
+.country-card p {
+  font-size: small;
+  color: black;
+  margin-bottom: 10px;
 }
