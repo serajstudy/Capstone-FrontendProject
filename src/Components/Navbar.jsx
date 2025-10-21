@@ -11,6 +11,7 @@ export default function Navbar() {
           <li><Link to="/profile">Profile</Link></li>
           <li><Link to="/countries">Countries</Link></li>
           <li><Link to="/services">Services</Link></li>
+          <li><Link to="/owner/messages">Messages</Link></li>
       
          
         </ul>

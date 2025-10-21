@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 import api from "../api/axiosConfig";
 
-function Form({ userId, countryId }) {
+function Form() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!message) return;
+    if (!name || !email || !message) {
+      setStatus("Please fill all fields.");
+      return;
+    }
 
     try {
-      await api.post("/appointment", { userId, countryId, message });
+      await api.post("/appointment", { name, email, message });
       setStatus("Message sent successfully!");
+      setName("");
+      setEmail("");
       setMessage("");
     } catch (err) {
       console.error(err);
@@ -23,8 +30,22 @@ function Form({ userId, countryId }) {
     <div className="form-box mt-4">
       <h5>Send a Message</h5>
       <form onSubmit={handleSubmit}>
+        <input
+          className="form-control mb-2"
+          type="text"
+          placeholder="Your Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          className="form-control mb-2"
+          type="email"
+          placeholder="Your Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
         <textarea
-          className="form-control"
+          className="form-control mb-2"
           rows="3"
           placeholder="Type your message..."
           value={message}

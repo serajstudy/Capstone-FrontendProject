@@ -9,6 +9,7 @@ import Home from './Pages/Home';
 import Country from './Pages/Country';
 import Profile from './Pages/Profile';
 import Service from './Pages/Service';
+import OwnerMessages from './Pages/OwnerMessages';
 
 import './App.css';
 
@@ -25,6 +26,8 @@ function App() {
             <Route path="/countries" element={<Country />} />
             <Route path="/services" element={<Service />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/owner/messages" element={<OwnerMessages />} />
+            
             {/* <Route path="/api-test" element={<ApiTest />} /> */}
           </Routes>
         </main>

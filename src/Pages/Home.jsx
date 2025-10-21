@@ -13,9 +13,9 @@ function Home() {
         <Link className="btn btn-primary btn-lg mt-3" to="/countries">
           Explore Countries
         </Link>
-        <Link className="btn btn-secondary btn-lg mt-3" to="/api-test">
+        {/* <Link className="btn btn-secondary btn-lg mt-3" to="/api-test">
         Test APIs
-        </Link>
+        </Link> */}
       </header>
 
       <section className="services-section mt-5">

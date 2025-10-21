@@ -8,7 +8,8 @@
 }
 
 body{
-  background-color: springgreen;
+  /* background-color: springgreen; */
+  background: #0dcaf0;
   color: indigo;
 }
 
@@ -127,4 +128,26 @@ p:last-of-type {
   font-size: small;
   color: black;
   margin-bottom: 10px;
+}
+
+.brand {
+  text-align: center;            /* Centers the button */
+  margin-top: 20px;
+}
+
+.brand button {
+  background-color: #0056b3;     /* Button color */
+  color: white;                  /* Text color */
+  border: none;                  /* Remove border */
+  padding: 12px 30px;            /* Button size */
+  font-size: 1.2rem;             /* Larger text */
+  font-weight: bold;
+  border-radius: 8px;            /* Rounded corners */
+  cursor: pointer;               /* Hand cursor on hover */
+  transition: 0.3s ease-in-out;  /* Smooth hover effect */
+}
+
+.brand button:hover {
+  background-color: #003d80; /* Darker on hover */
+
 }
