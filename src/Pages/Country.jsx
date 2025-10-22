@@ -9,7 +9,7 @@ import ukFlag from "../assets/images/gb.svg";
 import ausFlag from "../assets/images/au.svg";
 import canadaFlag from "../assets/images/ca.svg";
 import nzFlag from "../assets/images/nz.svg";
-import deFlag from "../assets/images/de.svg"; // Germany
+import deFlag from "../assets/images/de.svg"; 
 
 console.log("NZ Flag:", nzFlag);
 
@@ -24,9 +24,9 @@ const flagMap = {
   "Germany": deFlag,
 };
 
-function Country() {
+export default function Country() {
   const [countries, setCountries] = useState([]);
-  const userId = "65a1b2c3d4e5f67890123456"; // Example logged-in user
+  const userId = "65a1b2c3d4e5f67890123456"; 
 
   useEffect(() => {
     async function fetchCountries() {
@@ -51,7 +51,7 @@ function Country() {
             key={index}
             name={country.name}
             description={country.description}
-            // Use flagMap if exists; undefined flags will just not show an image
+           
             image={flagMap[country.name]}
           />
         ))}
@@ -62,7 +62,7 @@ function Country() {
       {countries.length > 0 && (
         <Form
           userId={userId}
-          // Use optional chaining in case _id is missing
+          
           countryId={countries[0]?._id || countries[0]?.name}
         />
       )}
@@ -70,4 +70,4 @@ function Country() {
   );
 }
 
-export default Country;
+

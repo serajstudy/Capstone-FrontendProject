@@ -1,27 +1,19 @@
-# Github link
+# Github link for CapstoneBackendProject and Capstone-FrontendProject
 https://github.com/serajstudy/CapstoneBackendProject.git
 
 https://github.com/serajstudy/Capstone-FrontendProject.git
 
+
+
+
 # SERAJ BASE EDUCATION CONSULTANCY  PROJECT (ABROAD STUDY USA,CANADA,UK,AUSTRALIA,)
 ![Wireframe](<Screenshot 2025-10-14 232330.png>)
- # BaseEducation
- BaseEducation is a full-stack MERN web application designed for BaseEducation Consultancy, an agency dedicated to helping students explore and apply to universities in countries like the USA, Canada, the UK, and Australia.
+ 
+
+# BaseEducation
+BaseEducation is a full-stack MERN (MongoDB/ MoogseDB, Express.js, React.js, Node.js) web application designed to help students explore study abroad opportunities, register for preparation classes, read blogs, and counseling appointments with educational advisors. Many students face confusion when preparing to study abroad, BaseEducation simplifies this by centralizing country infomation, services, blogs, and appointments.
 
 
- # Frontend
-# /pages
-Home.jsx
-Country.jsx
-Service.jsx 
-Profile.jsx
-
-# /components
-Navbar.jsx
-Footer.jsx
-CountryCard.jsx
-# /api
- axiosConfig.mjs
 
 New Plan
 
@@ -48,7 +40,6 @@ GET     	/api/users	    Fetch all appointments
 POST    	/api/users	    Create a new appointment
 PUT     	/api/users/:id	Update an appointment
 DELETE  	/api/users/:id	Delete an appointment
-
 # /middleware
 logmiddle
 global middle
@@ -56,28 +47,53 @@ global middle
 # /config
 db.js   
 
-# Pages
-Home Page
 
-Introduction to BaseEducation
-Highlight major destinations (USA, Canada, UK, Australia)
-Call-to-action: Book a Free Consultation
-Country Page
+# Frontend
+# /pages
+Home.jsx
+Country.jsx
+Service.jsx 
+Profile.jsx
+OwnerMessage.jsx
 
-Fetch and display all countries from database
-Add / Edit / Delete country info via forms
-Render countries using CountryCard component
 
-Service Page
+# /components
+Navbar.jsx
+Footer.jsx
+CountryCard.jsx
+Form.jsx
+# /api
+ axiosConfig.mjs
 
-List of educational and test preparation services:
-IELTS, TOEFL, SAT, GRE, GMAT, PTE
-Overview of study abroad process
 
-Profile Page
 
-User’s personal dashboard
-View and manage appointments and messages
+
+Capstone Breakdown:
+FrontEnd:
+
+    4 pages (react-router-dom)
+    Manage state using ReactHooks or other state MGMT tools (useState, useReducer, redux, useEffect)
+    Full C.R.U.D capabilities from your DB
+
+Backend/Server:
+
+    Connect to your DB
+    Effective Error Handling
+    C.R.U.D capabilities
+
+Documentation:
+
+    Well documented readme
+    Full Commit history, 25 commits- ish
+    Presentation
+
+Extra Credit:
+
+    using JIRA or other project tracking software 1%
+    typescript 3%
+    authentication 2%
+
+You only need to turn in ONE repo, but the READMEs' must be connected (edited) 
 
 # Building a Server, Step-By-Step!
 
@@ -97,6 +113,7 @@ MongoURI=
 # Frontend
 npm create vite@latest .
 create components and pages
+Install Boostrap
 npm i react react-dom
 npm i axios
 
